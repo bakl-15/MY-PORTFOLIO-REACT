@@ -1,13 +1,22 @@
+import React from "react";
+import "./App.css";
+import "boxicons/css/boxicons.min.css";
 
-import React from 'react'
-import Button from './components/form/Button';
-function App() {
+import Cover from "./components/Cover";
+ import Book from "./components/Book";
+import  TurnContextProvider  from "./porvider/TurnPageContext";
+
+const App = () => {
   return (
-    <div className="App">
-      <h1>sofiane</h1>
-      <Button primary >Je suis loin de</Button>
+    <TurnContextProvider>
+     <div className="wrapper">
+        <Cover />
+        <Book />
+      
     </div>
+    </TurnContextProvider>
+  
   );
-}
+};
 
 export default App;
